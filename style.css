@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gothan Rounded, sans-serif;
+    font-weight: normal;
+}
+
+.back {
+    display: block;
+    border: 2.5px solid rgb(41, 42, 138);
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    height: 680px;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    min-height: auto;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.windows {
+    padding-left: 20px;
+}
+
+.windows .min {
+    background-color: green;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+}
+
+.windows .exp {
+    background-color: yellow;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+}
+
+.windows .exit {
+    background-color: red;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+}
+
+.switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background: #b892ff;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+.previous.dark-mode {
+    background: rgb(45, 45, 90);
+    color:white;
+    
+}
+
+.kbrd.dark-mode {
+    background: rgb(45, 45, 90);
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.dark-mode {
+    background: rgb(45, 45, 90);
+    
+}
+.hovered {
+    transform: scale(1.2);
+    border-color: rgb(184, 146, 255);
+    box-shadow: 0 0 1rem rgb(184, 146, 255);
+    color: rgb(184, 146, 255);
+    
+}
+
+.kbrd {
+    display: initial;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    border: none;
+    width: 75px;
+    height: 75px;
+    background-color: white;
+}
+
+
+
+.output {
+    grid-column: 1 / -1;
+    width: auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgb(4, 60, 82);
+    border-radius: 50px;
+    font-size: 1.5rem;
+}
+
+.output .text {
+    padding-right: 10px;
+    border: none;
+    text-align: right;
+    background-color: whitesmoke;
+    width: 380px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(25, 25, 102);
+    font-size: 3rem;
+}

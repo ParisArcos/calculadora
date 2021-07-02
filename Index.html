@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <div id="background" class="back">
+        <div class="toggle">
+            <div class="windows">
+                <button class="min"></button>
+                <button class="exp"></button>
+                <button class="exit"></button>
+            </div>
+            <input id="base" type="color" name="base" value="#ffc600">
+            <label class="switch">
+                <input type="checkbox" onclick="changeMode()" placeholder="0">
+                <span class="slider"></span></label>
+        </div>
+        <div class="output">
+            <output class="previous">0</output>
+            <input class="text" onkeypress="return onlyNumberKey(event)" id="screen">
+        </div>
+        <div class="calculator-grid">
+            <div class="key">
+                <button class="kbrd" >C</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >Del</button>
+            </div>
+            <div class="key">
+                <button class="kbrd">% </button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >/</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >7</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >8</button>
+            </div>
+            <div class="key">
+                <button class="kbrd">9</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >*</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >4</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >5</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >6</button>
+            </div>
+
+            <div class="key">
+                <button class="kbrd" >+</button>
+            </div>
+
+            <div class="key">
+                <button class="kbrd" >1</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >2</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >3</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >-</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >.</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >0</button>
+            </div>
+            <div class="key">
+                <button class="kbrd" >res</button>
+            </div>
+
+            <div class="key">
+                <button class="kbrd" >=</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="Myscript.js"></script>
+
+
+</html>
